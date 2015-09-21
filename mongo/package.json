@@ -12,6 +12,7 @@
     "ejs": "*",
     "express": "*",
     "morgan": "*",
+    "mongodb": "*",
     "mongoose": "*"
   }
 }

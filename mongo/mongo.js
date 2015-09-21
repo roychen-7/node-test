@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require("./routes/test"));
+app.use(require("./routes/mongoose"));
+app.use(require("./routes/mongodb"));
 
 http.createServer(app).listen(4000, function(){
   console.log('mongo server listening on port 4000');
