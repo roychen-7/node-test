@@ -1,8 +1,8 @@
 var Validator = require('validatorjs');
 
 var data = {
-  name: 'John',
-  email: 'johndoe@gmail.com',
+  name: '',
+  email: 'q',
   age: '28'
 };
  
@@ -14,4 +14,6 @@ var rules = {
  
 var validation = new Validator(data, rules);
 
-console.log(validation.passes());
+if (validation.fails()) {
+  console.log(validation.errors.all());
+}
